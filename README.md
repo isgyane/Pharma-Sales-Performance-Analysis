@@ -8,7 +8,7 @@
 
 ## Business Context
 
-As a Senior Medical Sales Representative at a multinational pharma distributor, I managed a portfolio of 4 product SKUs across 300+ healthcare facilities — hospitals, pharmacies, and wholesalers — spanning multiple territories in Ghana.
+As a Medical Sales Representative at a multinational pharma distributor, I managed a portfolio of 4 product SKUs across 300+ healthcare facilities — hospitals, pharmacies, and wholesalers — spanning multiple territories in Ghana.
 
 The sales team had no standardized way to track performance trends, customer purchasing behavior, or upcoming stockout risk. Reporting was manual, fragmented, and reactive: reps compiled numbers at month-end, and by the time a stockout was spotted, the customer had already gone days or weeks without product — revenue leaked during the gap, and in the worst cases, competitors moved in.
 
@@ -22,58 +22,38 @@ But it grew beyond that. Each rep adopted their own version of the system to sel
 ---
 ## Executive Summary
 
-Key findings from FY2025 (~25,000 units sold across 160+ active customers and 4 products):
-
-- **Revenue concentration is dangerously high.** The top 5 customers account for ~47% of total revenue. Losing a single key account would create a significant gap that dozens of smaller customers couldn't fill.
-
-- **Monthly performance swings are extreme.** Target achievement ranged from as low as 31% in the weakest months to 158% in the strongest — a 5x variance that makes forecasting unreliable and creates cash flow pressure.
-
-- **Product performance is uneven.** Two products exceeded annual targets (one reaching 133%), while one product landed at just 56% of target — suggesting either a pricing issue, a prescriber engagement gap, or an allocation mismatch.
-
-- **The stockout prediction model flagged opportunities the team was missing.** By tracking consumption rates across 400+ facility-SKU combinations, the system identified customers whose purchasing had silently dropped — often a signal that prescribers had switched away from our products before the rep was even aware.
+This system has tracked performance across three full fiscal years (2023–2025), covering 4 products and 160+ active customers. Key findings:
+- **Total portfolio volume nearly quadrupled — even as targets were raised each year**. As the business grew, leadership increased targets to match. The system gave reps the visibility to consistently meet or exceed those moving goalposts
+- **The stockout prediction model became the team's most valuable early warning system**. By tracking consumption rates across 400+ facility-SKU combinations, the system didn't just flag upcoming stockouts — it surfaced dormant customers. Facilities that had purchased in the past but silently stopped reordering were flagged automatically, giving reps a concrete call list of lapsed accounts to investigate and re-engage before those customers were completely lost
+- **Every product grew in absolute volume year over year**. The top-performing product grew nearly 8x over the period. Even the slowest-growing product in the portfolio still more than tripled its volume
+- **Revenue concentration remains a key risk.** The top 5 customers account for nearly 50% of total revenue. Losing a single key account would create a significant gap that dozens of smaller customers couldn't fill.
 
 ---
 
 ## Insights Deep Dive
 
-### 1. Sales Trends & Target Achievement
+### 1. Seasonal Patterns & 2026 Q1 Strategy
 
-The system tracks monthly achievement against annual targets for each product, using a traffic-light indicator system (on track / behind / critical).
+Across all three years (2023–2025), Q1 consistently underperformed — driven by key hospital accounts making large purchases in December to build stock ahead of the tender review period in January–February. This front-loading of orders created a predictable Q1 revenue dip each year.
 
-**Key findings:**
-- **Q3 consistently outperforms other quarters**, driven by hospital procurement cycles that align with government budget releases. July and August regularly exceed 130% of monthly targets.
-- **Q4 drops sharply** — December achievement fell below 50%, partly due to holiday closures at key facilities but also because annual budgets are exhausted at major hospital accounts.
-- **February is a persistent weak spot** across all products (~35-44% achievement), suggesting a structural gap in early-year demand that marketing campaigns could address.
+The system also revealed a disparity between volume and revenue; Q4 2025 was the highest revenue quarter despite lower total units — because the highest-priced SKU delivered 234% of its quarterly target, pulling revenue disproportionately upward.
 
-The YTD vs. Full Year view gives reps a real-time read on whether current pace will hit the annual number, or whether acceleration is needed in remaining months.
+By surfacing these patterns, I implemented a targeted strategy going into 2026 to break the cycle and ensure a stronger start to the year. Early indicators suggest the approach is working.
 
-<!-- Dashboard screenshot placeholder -->
-<!-- ![Overview Dashboard](images/Dashboard%20Page.gif) -->
+### 2. Product Growth
+Every product in the portfolio grew year over year from 2023 to 2025, with total volume nearly quadrupling. The standout is Product A, which grew nearly 8x over the period and now accounts for the majority of portfolio volume — up from roughly a quarter of the mix in 2023.
 
-### 2. Product Performance
+The portfolio mix has shifted significantly: what was once a relatively balanced spread across four SKUs is now heavily led by one product. This isn't necessarily a problem — but it means revenue is increasingly sensitive to that product's performance in any given period.
 
-Four SKUs are tracked, each with distinct performance profiles:
+Diversifying growth across the remaining SKUs is a priority for 2026
 
-| Product | FY Target Achievement | Insight |
-|---------|----------------------|---------|
-| Product A (Injectable) | ~133% | Star performer. High-volume hospital accounts drive consistent demand. |
-| Product B (Capsule) | ~56% | Significantly underperforming. Low prescriber awareness or therapeutic competition likely. |
-| Product C (Sachet) | ~81% | Mid-range. Growth potential in pediatric-focused facilities. |
-| Product D (Ear drops) | ~111% | Exceeded target. Niche but reliable — steady demand from ENT departments. |
+### 3. Customer Concentration
+The top 5 customers account for roughly half of total revenue, with the top 2 alone contributing nearly 30%. The remaining 150+ customers share the other half. This isn't unusual in pharma sales — large teaching hospitals and government facilities naturally drive volume — but it creates real risk.
 
-**The gap between Product A (133%) and Product B (56%) represents the single largest revenue opportunity.** If Product B reached even 80% of target through focused prescriber engagement at top facilities, total portfolio revenue would increase meaningfully.
+Product C makes this particularly visible. Its volume is concentrated in just 3 facilities. For 2026, the goal is to **onboard 10+ new customers** for this product specifically, reducing over-reliance and building a more resilient revenue base.
 
-### 3. Customer Concentration & Territory Analysis
 
-The customer analysis breaks down performance by individual facility and territory, revealing where revenue actually comes from:
-
-- **Top 5 facilities contribute ~47% of total revenue.** These are large teaching hospitals and military/government facilities with high patient volumes.
-- **The long tail is wide but thin.** Over 100 facilities contribute individually small amounts. Many ordered only once or twice across the year.
-- **Territory performance varies significantly**, with urban territories (Accra, Kumasi) driving the majority of volume while regional territories show untapped potential.
-
-The Customer Budget vs. Achieved view tracks each key account's progress against their individual allocation, making it immediately visible which accounts are falling behind their committed volumes.
-
-### 4. Stockout Prediction & Prescriber Drop-Off Detection
+### 4. Dormant Customer Detection & Stockout Prediction
 
 This is the most operationally impactful feature. For every facility-SKU combination, the system calculates:
 
@@ -82,32 +62,11 @@ This is the most operationally impactful feature. For every facility-SKU combina
 - **Predicted current stock** — estimated units remaining today
 - **Days to depletion** — when will they run out?
 
-**What makes this more than inventory tracking:** a customer whose predicted stock goes deeply negative isn't just "out of stock" — they've likely stopped using the product entirely. This is the early warning signal that a prescriber has switched to a competitor or a hospital formulary committee has dropped the product. By the time a rep notices the customer hasn't reordered, it may be months too late.
+Of the 400+ facility-SKU combinations tracked, a significant number show deeply negative predicted stock — meaning the customer has long passed their expected reorder date. Some facilities haven't placed an order in over 18 months.
 
-The system tracks 400+ facility-SKU combinations and flags:
-- 🔴 **Overdue** — predicted stock is negative; customer should have reordered but hasn't
-- 🟡 **Due soon** — stock is running low; rep should proactively reach out
-- 🟢 **Healthy** — adequate stock based on consumption rate
+These aren't just late orders. A facility whose predicted stock has been negative for months has almost certainly stopped using the product (or purchasing through a third-party). The prescribers in some of those hospital may have switched to a competitor, or the product may have been removed from the hospital's formulary. Without this system, a rep might not notice for months. With it, these accounts surface automatically as a prioritized re-engagement list
 
-This shifts the rep's workflow from reactive ("why didn't they order?") to proactive ("they'll need stock next week — let me call now").
-
----
-
-## Recommendations
-
-Based on the patterns surfaced by this system:
-
-**Revenue Concentration**
-- Develop a "Next 10" growth plan targeting mid-tier facilities with the highest potential to become top accounts, reducing dependence on the current top 5.
-
-**Product B Underperformance**
-- Investigate prescriber awareness at high-potential facilities. Cross-reference with facilities that buy Product A (same call points) but not Product B — these are warm leads where the rep relationship already exists.
-
-**Seasonal Gaps**
-- Pre-position stock and run targeted outreach campaigns in January–February and December to smooth the achievement curve and reduce the 5x monthly variance.
-
-**Prescriber Drop-Off**
-- Flag any facility-SKU combination where predicted stock has been negative for 60+ days as a "prescriber risk" for immediate field visit and investigation.
+This shifts the rep's workflow from reactive ("why didn't they order?") to proactive ("they'll need stock next week — let me follow up now").
 
 ---
 
@@ -124,23 +83,25 @@ The system consists of two linked Excel workbooks:
 
 | View | Purpose |
 |------|---------|
-| **Overview** | North Star KPIs: total revenue, units sold, customer count, products on target |
-| **YTD vs Full Year** | Pace tracking — will current run rate hit annual targets? |
-| **Growth Analysis** | Month-over-month and year-over-year trends by product |
-| **Customer Analysis** | Revenue and volume breakdown by individual facility |
-| **Customer Budget vs Achieved** | Key account allocation tracking with achievement % |
-| **Territory Breakdown** | Geographic performance comparison across territories |
-| **Stockout Prediction** | Consumption-based reorder forecasting for 400+ facility-SKU pairs |
+| **Overview** | Performance vs. target at a glance — achievement % and deficit by product |
+| **YTD vs Full Year** | Are we on track to hit annual targets, or do we need to accelerate? |
+| **Growth Analysis** | How is each product trending for the current year vs previous year? |
+| **Customer Analysis** | Which facilities are driving revenue, and volumes and which are falling behind? |
+| **Customer Budget vs Achieved** | Are key accounts buying at the volumes we targetted for them? |
+| **Territory Breakdown** | Which geographic areas are performing and where are the gaps? |
+| **Stockout Prediction** | Who needs to reorder soon — and who has silently stopped buying? |
 | **Weekly Report** | Snapshot view for weekly team meetings |
+
+👋I've also built this same analytical framework in Power BI and SQL. The insights are the same
 
 ### Technical Implementation
 
-- **Data Model:** Excel Data Model with relationships between sales transactions, customer master, product master, and calendar tables
+- **Data Model:** Excel Data Model with relationships between sales transactions, customers, product targets, and calendar tables
 - **Data Preparation:** Power Query (M language) for ETL — cleaning, type conversion, and merging across workbooks
 - **Custom Calendar:** Built to align with the company's non-standard fiscal calendar for accurate period-over-period comparisons
 - **Consumption Rate Engine:** Calculates rolling consumption rates per facility-SKU based on order frequency and quantity, then projects forward to estimate current stock levels and next purchase dates
 - **Pivot Tables:** 15+ pivot tables powering the backend calculations, feeding into dashboard visualizations via structured ranges
-- **Interactive Filtering:** Slicers for period selection (year, quarter, month, week) across all views
+- **Interactive Filtering:** Slicers for period selection (year, quarter, month, week) across most views
 
 ---
 

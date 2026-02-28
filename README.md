@@ -1,4 +1,4 @@
-# Pharmaceutical Sales Performance Analytics
+# Pharmaceutical Sales Performance Analysis
 
 **An end-to-end Excel analytics system built for a multinational pharmaceutical distributor's field sales team in Ghana.**
 

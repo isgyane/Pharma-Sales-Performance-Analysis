@@ -107,7 +107,7 @@ The system consists of two linked Excel workbooks:
 - **Consumption Rate Engine:** Calculates rolling consumption rates per facility-SKU based on order frequency and quantity, then projects forward to estimate current stock levels and next purchase dates
 - **Pivot Tables:** 15+ pivot tables powering the backend calculations, feeding into dashboard visualizations via structured ranges
 - **Interactive Filtering:** Slicers for period selection (year, quarter, month, week) across most views
-![Data Model](/images/DataModel.png)
+![Data Model](/images/DataModel_PharmaAnalysis.png)
 ---
 
 ## Impact

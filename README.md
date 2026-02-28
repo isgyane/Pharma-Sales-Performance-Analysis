@@ -8,7 +8,7 @@
 
 ## Business Context
 
-As a Medical Sales Representative at a multinational pharma distributor, I managed a portfolio of 4 product SKUs across 300+ healthcare facilities — hospitals, pharmacies, and wholesalers — spanning multiple territories in Ghana.
+As a Medical Sales Representative at a multinational pharma distributor, I managed a portfolio of 4 product SKUs across 200+ healthcare facilities — hospitals, pharmacies, and wholesalers — spanning multiple territories in Ghana.
 
 The sales team had no standardized way to track performance trends, customer purchasing behavior, or upcoming stockout risk. Reporting was manual, fragmented, and reactive: reps compiled numbers at month-end, and by the time a stockout was spotted, the customer had already gone days or weeks without product — revenue leaked during the gap, and in the worst cases, competitors moved in.
 
@@ -22,25 +22,28 @@ But it grew beyond that. Each rep adopted their own version of the system to sel
 ---
 ## Executive Summary
 
-This system has tracked performance across three full fiscal years (2023–2025), covering 4 products and 160+ active customers. Key findings:
+This system has tracked performance across three full fiscal years (2023–2025), covering 4 products and 200+ active customers. Key findings:
 - **Total portfolio volume nearly quadrupled — even as targets were raised each year**. As the business grew, leadership increased targets to match. The system gave reps the visibility to consistently meet or exceed those moving goalposts
 - **The stockout prediction model became the team's most valuable early warning system**. By tracking consumption rates across 400+ facility-SKU combinations, the system didn't just flag upcoming stockouts — it surfaced dormant customers. Facilities that had purchased in the past but silently stopped reordering were flagged automatically, giving reps a concrete call list of lapsed accounts to investigate and re-engage before those customers were completely lost
 - **Every product grew in absolute volume year over year**. The top-performing product grew nearly 8x over the period. Even the slowest-growing product in the portfolio still more than tripled its volume
 - **Revenue concentration remains a key risk.** The top 5 customers account for nearly 50% of total revenue. Losing a single key account would create a significant gap that dozens of smaller customers couldn't fill.
+
+![Overview Page](/images/OverviewPage_Pharma%20Analysis.png)
 
 ---
 
 ## Insights Deep Dive
 
 ### 1. Seasonal Patterns & 2026 Q1 Strategy
-
 Across all three years (2023–2025), Q1 consistently underperformed — driven by key hospital accounts making large purchases in December to build stock ahead of the tender review period in January–February. This front-loading of orders created a predictable Q1 revenue dip each year.
 
 The system also revealed a disparity between volume and revenue; Q4 2025 was the highest revenue quarter despite lower total units — because the highest-priced SKU delivered 234% of its quarterly target, pulling revenue disproportionately upward.
 
+
 By surfacing these patterns, I implemented a targeted strategy going into 2026 to break the cycle and ensure a stronger start to the year. Early indicators suggest the approach is working.
 
 ### 2. Product Growth
+![Overview Page](/images/GrowthAnalysis_Pharma%20Analysis.png)
 Every product in the portfolio grew year over year from 2023 to 2025, with total volume nearly quadrupling. The standout is Product A, which grew nearly 8x over the period and now accounts for the majority of portfolio volume — up from roughly a quarter of the mix in 2023.
 
 The portfolio mix has shifted significantly: what was once a relatively balanced spread across four SKUs is now heavily led by one product. This isn't necessarily a problem — but it means revenue is increasingly sensitive to that product's performance in any given period.
@@ -61,6 +64,8 @@ This is the most operationally impactful feature. For every facility-SKU combina
 - **Consumption rate** — how fast are they going through stock, based on order history?
 - **Predicted current stock** — estimated units remaining today
 - **Days to depletion** — when will they run out?
+
+![Overview Page](/images/SalesPrediction_Pharma%20Analysis.png)
 
 Of the 400+ facility-SKU combinations tracked, a significant number show deeply negative predicted stock — meaning the customer has long passed their expected reorder date. Some facilities haven't placed an order in over 18 months.
 
@@ -102,7 +107,7 @@ The system consists of two linked Excel workbooks:
 - **Consumption Rate Engine:** Calculates rolling consumption rates per facility-SKU based on order frequency and quantity, then projects forward to estimate current stock levels and next purchase dates
 - **Pivot Tables:** 15+ pivot tables powering the backend calculations, feeding into dashboard visualizations via structured ranges
 - **Interactive Filtering:** Slicers for period selection (year, quarter, month, week) across most views
-
+![Data Model](/images/Data%20Model.png)
 ---
 
 ## Impact
